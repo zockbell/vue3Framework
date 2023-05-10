@@ -27,7 +27,7 @@ Vue cli 在服务启动之前，要把所有代码打包成 Bundle 再启动服�
 
 Vite 以 [原生 ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) 方式提供源码。这实际上是让浏览器接管了打包程序的部分工作：Vite 只需要在浏览器请求源码时进行转换并按需提供源码。
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\vite.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/vite.png)
 
 ### 2.3 [为什么选vite](https://cn.vitejs.dev/guide/why.html)
 
@@ -595,7 +595,7 @@ const showModal = () => {
 </style>
 ```
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\teleport.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/teleport.png)
 
 
 
@@ -884,7 +884,7 @@ npm install vue-router@4      or      yarn add vue-router@4
 const route = useRoute();
 ```
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\route.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/route.png)
 
 - router
 
@@ -901,7 +901,7 @@ router.push({
 });
 ```
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\router.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/router.png)
 
 ```js
 const router = useRouter();
@@ -1043,7 +1043,7 @@ console.log("参数：", route.params.id);
    }
    ```
 
-   ![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\not_found.png)
+   ![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/not_found.png)
 
    `vue3` 中配置：
 
@@ -1069,7 +1069,7 @@ console.log("参数：", route.params.id);
    }
    ```
 
-   ![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\nomatch.png)
+   ![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/nomatch.png)
 
 6. [`RouterLink` 标签化](https://router.vuejs.org/zh/api/#router-link-%E7%9A%84-v-slot)
 
@@ -1085,7 +1085,7 @@ console.log("参数：", route.params.id);
    </RouterLink>
    ```
 
-   ![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\v-slot.png)
+   ![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/v-slot.png)
 
 
 
@@ -1195,7 +1195,7 @@ const change = () => {
 </template>
 ```
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\pinia.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/pinia.png)
 
 
 
@@ -1394,7 +1394,7 @@ const btn = ()=>{
    */
    ```
 
-   ![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\pinia-plugin-persistedstate.png)
+   ![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/pinia-plugin-persistedstate.png)
 
 ### **`Pinia` 和 `Vuex` 的区别**
 
@@ -1419,31 +1419,31 @@ const btn = ()=>{
 
 直接在`vscode`的插件市场搜索`volar`，然后点击安装即可。
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\volar.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/volar.png)
 
 ### 	7.3 功能
 
 1. 不再需要唯一根标签
 
-   ![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\root.png)
+   ![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/root.png)
 
 2. 编辑器快捷分割
 
    `vue`单文件组件，按照功能，存在`template`、`script`、`style`三个根元素。`volar`将此拆分成多个视窗。
 
-   ![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\split_ico.png)
+   ![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/split_ico.png)
 
    volar`v1.0.11`版本删除了这个拆分图标，社区提问为啥拆分图标没了，[作者的回答是为了节省视图空间](https://github.com/johnsoncodehk/volar/issues/2162)
 
    目前，此功能用户可以通过设置自行决定开启此拆分功能
 
-   ![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\split_editor.png)
+   ![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/split_editor.png)
 
-   ![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\split.png)
+   ![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/split.png)
 
 3. `style`里面的`class`引用，样式中出现`reference`的小图标时，代表着当前`class`的引用，点击可以弹出具体的使用位置，可对其进行修改及追溯。
 
-   ![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\reference.png)
+   ![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/reference.png)
 
 ---
 
@@ -1534,15 +1534,15 @@ css: {
   }
 ```
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\sass1.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/sass1.png)
 
 可直接使用：
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\sass2.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/sass2.png)
 
 也可按需引入：
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\sass3.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/sass3.png)
 
 ---
 
@@ -1647,7 +1647,7 @@ server: {
 
 不翻墙可以使用“[极简插件](https://chrome.zzzmh.cn/#/extension)”搜索并下载，安装。
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\devtools.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/devtools.png)
 
 ---
 
@@ -1725,7 +1725,7 @@ server: {
    <el-button type="success">Success</el-button>
    ```
 
-   ![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\scccess.png)
+   ![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/scccess.png)
 
 ---
 
