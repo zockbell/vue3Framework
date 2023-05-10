@@ -17,7 +17,7 @@
 
 工作原理：
 
-![](D:\pep\27-前端项目总结\vue3-learn-230228\screenshot\vue-cli.png)
+![](https://github.com/zockbell/vue3Framework/blob/master/src/assets/screenshot/vue-cli.png)
 
 Vue cli 在服务启动之前，要把所有代码打包成 Bundle 再启动服务。这就是为什么启动一些大型项目时，特别慢的原因。这一点上 Vite 做了大幅改善。
 
