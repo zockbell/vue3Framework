@@ -1933,4 +1933,5 @@ nginx -s reload
 
 ## 19. 线上demo
 > http://82.157.205.207/vue3/
+> http://82.157.205.207/vue3/mitt
 
