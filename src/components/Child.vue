@@ -1,4 +1,4 @@
-<!-- <script setup>
+<!-- <script setup lang="ts">
 import { defineProps } from "vue";
 defineProps({
   msg: {
@@ -8,7 +8,7 @@ defineProps({
 });
 </script> -->
 
-<script>
+<script lang="ts">
 export default {
   props: ["msg"],
   setup(props) {
