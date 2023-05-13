@@ -28,7 +28,22 @@ const router = createRouter({
       component: () => import('../views/mitt/mitt.vue')
     },
     {
-      path: '/news/:id?',
+      path: '/video',
+      name: 'video',
+      component: () => import('../views/video/video.vue')
+    },
+    {
+      path: '/videom3u8',
+      name: 'videoM3u8',
+      component: () => import('../views/video/videoM3u8.vue')
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: () => import('../views/cart/cart.vue')
+    },
+    {
+      path: '/news/:id',
       name: 'news',
       /* 路由独享守卫*/
       beforeEnter: (to, from, next) => {
