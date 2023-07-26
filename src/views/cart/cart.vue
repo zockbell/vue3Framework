@@ -33,7 +33,7 @@ const checkAll = () => {
 <template>
   <div class="fixed">
     <div class="bgColor">
-      <h1 class="main-shopcart">购物车</h1>
+      <h1 class="main-shopcart">人教点读购物车</h1>
     </div>
     <div class="container">
       <div class="main">
