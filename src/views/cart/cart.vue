@@ -1,27 +1,39 @@
 <script setup lang="ts">
-import { createToken, getShopCarList } from "@/api/getCart";
+// 导入 pinia 中的 storeToRefs 方法
+import { storeToRefs } from "pinia";
+import { getShopCarListJson } from "@/api/getCart";
+import { useCartStore } from "@/stores/cart";
 
-let token = ref("11");
+let cartStore = useCartStore();
+let { cartList, isChecked, total } = storeToRefs(cartStore);
 onBeforeMount(() => {
-  createToken().then((res) => {
-    // console.log(res);
-    token.value = res.data.data.token;
-    getShopCarList(
-      {
-        token: res.data.data.token,
-      },
-      token
-    ).then((res) => {
-      console.log(res);
-    });
+  getShopCarListJson().then((res) => {
+    // console.log(res.data.list);
+    cartStore.addCart(res.data.list);
   });
 });
+
+// 数量
+const handleChange = (value: number) => {
+  console.log(value);
+};
+
+// 点击全选
+const checkAll = () => {
+  if (isChecked.value) {
+    // 全不选
+    cartStore.unAll();
+  } else {
+    // 全选
+    cartStore.all();
+  }
+};
 </script>
 
 <template>
   <div class="fixed">
     <div class="bgColor">
-      <h1 class="main-shopcart">购物车{{ token }}</h1>
+      <h1 class="main-shopcart">购物车</h1>
     </div>
     <div class="container">
       <div class="main">
@@ -30,7 +42,9 @@ onBeforeMount(() => {
         </div>
         <ul class="head">
           <li class="item check">
-            <el-checkbox>全选</el-checkbox>
+            <el-checkbox v-model="isChecked" @change="checkAll"
+              >全选</el-checkbox
+            >
           </li>
           <li class="item classInfo">课程信息</li>
           <li class="item price">单价</li>
@@ -38,21 +52,35 @@ onBeforeMount(() => {
           <li class="item total">金额</li>
           <li class="item function">操作</li>
         </ul>
-        <div v-if="true">
-          <ul class="haveorder">
+        <div v-if="cartList.length">
+          <ul class="haveorder" v-for="(item, i) in cartList" :key="item.id">
             <li class="order-item">
-              <el-checkbox></el-checkbox>
+              <el-checkbox
+                v-model="item.check"
+                @change="cartStore.radio(item, i)"
+              ></el-checkbox>
             </li>
             <li class="order-item info">
               <div class="courseimg">
-                <img src="" alt="" />
+                <img :src="item.courseCover" :alt="item.courseName" />
               </div>
-              <div class="course-name">名称</div>
+              <div class="course-name">{{ item.courseName }}</div>
             </li>
 
-            <li class="order-item">￥10</li>
-            <li class="order-item num">10</li>
-            <li class="order-item totoalprice">￥299</li>
+            <li class="order-item discountPrice">￥{{ item.discountPrice }}</li>
+            <!-- <li class="order-item num">{{ item.counter }}</li> -->
+            <li class="order-item num">
+              <el-input-number
+                v-model="item.counter"
+                :min="1"
+                :max="10"
+                size="small"
+                @change="handleChange"
+              />
+            </li>
+            <li class="order-item totoalprice">
+              ￥{{ item.discountPrice * item.counter }}
+            </li>
             <li class="order-item delete">
               <a href="javascript:;">
                 <i class="el-icon-delete"></i>
@@ -62,13 +90,16 @@ onBeforeMount(() => {
           </ul>
         </div>
         <div class="noOrder" v-else>
-          <img src="/image/norder365.png" alt="" />
           <div class="order-alert">哎呦！暂无订单</div>
         </div>
         <el-divider class="line"></el-divider>
         <ul class="foot">
-          <li class="foot-item">已选课程<span class="unique">10</span></li>
-          <li class="foot-item">合计<span class="unique">299</span></li>
+          <li class="foot-item">
+            已选课程总数量<span class="unique">{{ total.number }}</span>
+          </li>
+          <li class="foot-item">
+            合计<span class="unique">￥{{ total.price.toFixed(2) }}</span>
+          </li>
           <li>
             <button class="btn">去结算</button>
           </li>
@@ -226,9 +257,12 @@ ul li {
 .totoalprice {
   color: #e2231a;
 }
+.discountPrice {
+  width: 120px;
+}
 .num {
-  width: 120px !important;
-  padding-left: 15px;
+  width: 150px !important;
+  padding-right: 15px;
 }
 .info {
   display: flex;
@@ -237,13 +271,12 @@ ul li {
   line-height: 200px;
 }
 .courseimg {
-  margin: 40px 20px 40px 0;
+  margin: 20px 20px 40px 0;
   width: 200px;
   height: 120px;
 }
 .courseimg img {
-  width: 100%;
-  height: 100%;
+  width: 85%;
 }
 .info .course-name {
   width: 300px;
@@ -289,7 +322,7 @@ ul li {
   margin-bottom: 10px;
 }
 .foot-item {
-  width: 120px;
+  width: 150px;
   height: 40px;
   line-height: 40px;
   font-size: 14px;
