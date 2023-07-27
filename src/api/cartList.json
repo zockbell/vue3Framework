@@ -1,0 +1,52 @@
+{
+  "list": [
+    {
+      "discountPrice": 0.01,
+      "salePrice": 25,
+      "courseName": "晴耕雨读，得闲饮茶",
+      "updateBy": "",
+      "courseCover": "https://img3m7.ddimg.cn/50/29/29546897-1_l_9.jpg",
+      "courseId": "588",
+      "counter": 3,
+      "status": 1,
+      "memberId": "",
+      "createBy": "",
+      "updateTime": null,
+      "createTime": null,
+      "id": "001",
+      "description": "晴耕雨读，得闲饮茶"
+    },
+    {
+      "discountPrice": 15.0,
+      "salePrice": 20.0,
+      "courseName": "我笨拙地爱着这个世界",
+      "updateBy": "",
+      "courseCover": "https://img3m5.ddimg.cn/45/26/29558475-1_l_2.jpg",
+      "courseId": "599",
+      "counter": 2,
+      "status": 1,
+      "memberId": "",
+      "createBy": "",
+      "updateTime": null,
+      "createTime": null,
+      "id": "002",
+      "description": "我笨拙地爱着这个世界"
+    },
+    {
+      "discountPrice": 0.02,
+      "salePrice": 50,
+      "courseName": "越过人间荒唐：大文豪的人生逆旅",
+      "updateBy": "",
+      "courseCover": "https://img3m8.ddimg.cn/42/3/29596488-1_l_1690171718.jpg",
+      "courseId": "600",
+      "counter": 4,
+      "status": 1,
+      "memberId": "",
+      "createBy": "",
+      "updateTime": null,
+      "createTime": null,
+      "id": "003",
+      "description": "越过人间荒唐：大文豪的人生逆旅"
+    }
+  ]
+}
