@@ -23,6 +23,11 @@ const router = createRouter({
       component: () => import('../views/dynamic/Dynamic.vue')
     },
     {
+      path: '/dom2svg',
+      name: 'dom2Svg',
+      component: () => import('../views/dom2Svg/Dom2Svg.vue')
+    },
+    {
       path: '/mitt',
       name: 'mitt',
       component: () => import('../views/mitt/mitt.vue')
