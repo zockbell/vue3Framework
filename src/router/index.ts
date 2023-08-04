@@ -28,6 +28,11 @@ const router = createRouter({
       component: () => import('../views/dom2Svg/Dom2Svg.vue')
     },
     {
+      path: '/html2canvas',
+      name: 'html2canvas',
+      component: () => import('../views/html2canvas/index.vue')
+    },
+    {
       path: '/mitt',
       name: 'mitt',
       component: () => import('../views/mitt/mitt.vue')
